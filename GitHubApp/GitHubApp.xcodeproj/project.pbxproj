@@ -46,6 +46,15 @@
 		929E3501297C812A00C39F13 /* Optional+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3500297C812A00C39F13 /* Optional+Ext.swift */; };
 		929E3503297C815000C39F13 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3502297C815000C39F13 /* Int+Ext.swift */; };
 		929E3505297C892500C39F13 /* GenericResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3504297C892500C39F13 /* GenericResponseModel.swift */; };
+		929E3509297C8B5500C39F13 /* ListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3508297C8B5500C39F13 /* ListTableView.swift */; };
+		929E350C297C909700C39F13 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E350A297C909700C39F13 /* ListTableViewCell.swift */; };
+		929E350D297C909700C39F13 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E350B297C909700C39F13 /* ListTableViewCell.xib */; };
+		929E3510297C911C00C39F13 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E350F297C911C00C39F13 /* DetailInteractor.swift */; };
+		929E3512297C912900C39F13 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3511297C912900C39F13 /* DetailPresenter.swift */; };
+		929E3514297C913300C39F13 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3513297C913300C39F13 /* DetailRouter.swift */; };
+		929E3516297C913E00C39F13 /* DetailContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3515297C913E00C39F13 /* DetailContractor.swift */; };
+		929E351A297C916500C39F13 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3518297C916500C39F13 /* DetailViewController.swift */; };
+		929E351B297C916500C39F13 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E3519297C916500C39F13 /* DetailViewController.xib */; };
 		9BDD98133F1939A2F12A580E /* Pods_GitHubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30885045942A4B79B487DD6 /* Pods_GitHubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +121,15 @@
 		929E3500297C812A00C39F13 /* Optional+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Ext.swift"; sourceTree = "<group>"; };
 		929E3502297C815000C39F13 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		929E3504297C892500C39F13 /* GenericResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponseModel.swift; sourceTree = "<group>"; };
+		929E3508297C8B5500C39F13 /* ListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableView.swift; sourceTree = "<group>"; };
+		929E350A297C909700C39F13 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		929E350B297C909700C39F13 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		929E350F297C911C00C39F13 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		929E3511297C912900C39F13 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		929E3513297C913300C39F13 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		929E3515297C913E00C39F13 /* DetailContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContractor.swift; sourceTree = "<group>"; };
+		929E3518297C916500C39F13 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		929E3519297C916500C39F13 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		97D310D3AF822ACE2232D26E /* Pods-GitHubApp-GitHubAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp-GitHubAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp-GitHubAppUITests/Pods-GitHubApp-GitHubAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5195C5903B2735DD1FE001E /* Pods_GitHubAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30885045942A4B79B487DD6 /* Pods_GitHubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				929E34B9297BF91E00C39F13 /* List */,
+				929E350E297C910B00C39F13 /* Detail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -256,6 +275,7 @@
 		929E34BE297BF96900C39F13 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				929E3506297C8B4200C39F13 /* Connector */,
 				929E34C2297BF9A900C39F13 /* ListViewController.swift */,
 				929E34C3297BF9A900C39F13 /* ListViewController.xib */,
 			);
@@ -387,6 +407,45 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		929E3506297C8B4200C39F13 /* Connector */ = {
+			isa = PBXGroup;
+			children = (
+				929E3507297C8B4800C39F13 /* Cells */,
+				929E3508297C8B5500C39F13 /* ListTableView.swift */,
+			);
+			path = Connector;
+			sourceTree = "<group>";
+		};
+		929E3507297C8B4800C39F13 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				929E350A297C909700C39F13 /* ListTableViewCell.swift */,
+				929E350B297C909700C39F13 /* ListTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		929E350E297C910B00C39F13 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				929E3517297C914900C39F13 /* View */,
+				929E3515297C913E00C39F13 /* DetailContractor.swift */,
+				929E3513297C913300C39F13 /* DetailRouter.swift */,
+				929E3511297C912900C39F13 /* DetailPresenter.swift */,
+				929E350F297C911C00C39F13 /* DetailInteractor.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		929E3517297C914900C39F13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				929E3518297C916500C39F13 /* DetailViewController.swift */,
+				929E3519297C916500C39F13 /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -503,9 +562,11 @@
 				929E34DF297BFB0B00C39F13 /* indicator-animation-view.json in Resources */,
 				929E348E297BF4D200C39F13 /* LaunchScreen.storyboard in Resources */,
 				929E348B297BF4D200C39F13 /* Assets.xcassets in Resources */,
+				929E351B297C916500C39F13 /* DetailViewController.xib in Resources */,
 				929E34C5297BF9A900C39F13 /* ListViewController.xib in Resources */,
 				929E34EC297C291000C39F13 /* ActivityIndicator.xib in Resources */,
 				929E3486297BF4D000C39F13 /* Main.storyboard in Resources */,
+				929E350D297C909700C39F13 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				929E34EE297C296E00C39F13 /* ActivityIndicatorManager.swift in Sources */,
+				929E3516297C913E00C39F13 /* DetailContractor.swift in Sources */,
 				929E34E6297C279900C39F13 /* Fonts.swift in Sources */,
 				929E34D7297BFAA400C39F13 /* NetworkManager.swift in Sources */,
 				929E34E4297C279200C39F13 /* Colours.swift in Sources */,
@@ -642,12 +704,15 @@
 				929E3503297C815000C39F13 /* Int+Ext.swift in Sources */,
 				929E34D1297BFA7500C39F13 /* Contractable.swift in Sources */,
 				929E34C7297BF9E300C39F13 /* ListRouter.swift in Sources */,
+				929E3510297C911C00C39F13 /* DetailInteractor.swift in Sources */,
 				929E34C9297BF9EF00C39F13 /* ListContractor.swift in Sources */,
 				929E347F297BF4D000C39F13 /* AppDelegate.swift in Sources */,
+				929E3514297C913300C39F13 /* DetailRouter.swift in Sources */,
 				929E34F9297C803500C39F13 /* Array+Ext.swift in Sources */,
 				929E34C4297BF9A900C39F13 /* ListViewController.swift in Sources */,
 				929E34CD297BFA3400C39F13 /* BaseViewController.swift in Sources */,
 				929E3501297C812A00C39F13 /* Optional+Ext.swift in Sources */,
+				929E3509297C8B5500C39F13 /* ListTableView.swift in Sources */,
 				929E34F3297C381D00C39F13 /* UIView+Ext.swift in Sources */,
 				929E3505297C892500C39F13 /* GenericResponseModel.swift in Sources */,
 				929E34F1297C380200C39F13 /* CGFloat+Ext.swift in Sources */,
@@ -656,11 +721,14 @@
 				929E34F7297C801500C39F13 /* UICollectionView+Ext.swift in Sources */,
 				929E34DB297BFAB700C39F13 /* Networkable.swift in Sources */,
 				929E3489297BF4D000C39F13 /* GitHubApp.xcdatamodeld in Sources */,
+				929E351A297C916500C39F13 /* DetailViewController.swift in Sources */,
 				929E34C0297BF97A00C39F13 /* Models.swift in Sources */,
 				929E34FD297C80C200C39F13 /* NSObject+Ext.swift in Sources */,
+				929E3512297C912900C39F13 /* DetailPresenter.swift in Sources */,
 				929E34FB297C809300C39F13 /* UITableView+Ext.swift in Sources */,
 				929E34D4297BFA8B00C39F13 /* CoreDataManager.swift in Sources */,
 				929E34EB297C291000C39F13 /* ActivityIndicator.swift in Sources */,
+				929E350C297C909700C39F13 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
