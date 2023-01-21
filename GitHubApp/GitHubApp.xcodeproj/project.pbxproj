@@ -19,6 +19,20 @@
 		929E34A5297BF4D200C39F13 /* GitHubAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34A4297BF4D200C39F13 /* GitHubAppUITestsLaunchTests.swift */; };
 		929E34B3297BF5EA00C39F13 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 929E34B2297BF5EA00C39F13 /* Alamofire */; };
 		929E34B6297BF62200C39F13 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 929E34B5297BF62200C39F13 /* Lottie */; };
+		929E34BB297BF95300C39F13 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34BA297BF95300C39F13 /* ListInteractor.swift */; };
+		929E34BD297BF96300C39F13 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34BC297BF96300C39F13 /* ListPresenter.swift */; };
+		929E34C0297BF97A00C39F13 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34BF297BF97A00C39F13 /* Models.swift */; };
+		929E34C4297BF9A900C39F13 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34C2297BF9A900C39F13 /* ListViewController.swift */; };
+		929E34C5297BF9A900C39F13 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E34C3297BF9A900C39F13 /* ListViewController.xib */; };
+		929E34C7297BF9E300C39F13 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34C6297BF9E300C39F13 /* ListRouter.swift */; };
+		929E34C9297BF9EF00C39F13 /* ListContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34C8297BF9EF00C39F13 /* ListContractor.swift */; };
+		929E34CD297BFA3400C39F13 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34CC297BFA3400C39F13 /* BaseViewController.swift */; };
+		929E34D1297BFA7500C39F13 /* Contractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34D0297BFA7500C39F13 /* Contractable.swift */; };
+		929E34D4297BFA8B00C39F13 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34D3297BFA8B00C39F13 /* CoreDataManager.swift */; };
+		929E34D7297BFAA400C39F13 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34D6297BFAA400C39F13 /* NetworkManager.swift */; };
+		929E34D9297BFAAD00C39F13 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34D8297BFAAD00C39F13 /* Models.swift */; };
+		929E34DB297BFAB700C39F13 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E34DA297BFAB700C39F13 /* Networkable.swift */; };
+		929E34DF297BFB0B00C39F13 /* indicator-animation-view.json in Resources */ = {isa = PBXBuildFile; fileRef = 929E34DE297BFB0B00C39F13 /* indicator-animation-view.json */; };
 		9BDD98133F1939A2F12A580E /* Pods_GitHubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30885045942A4B79B487DD6 /* Pods_GitHubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +70,20 @@
 		929E349E297BF4D200C39F13 /* GitHubAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		929E34A2297BF4D200C39F13 /* GitHubAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppUITests.swift; sourceTree = "<group>"; };
 		929E34A4297BF4D200C39F13 /* GitHubAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		929E34BA297BF95300C39F13 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		929E34BC297BF96300C39F13 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		929E34BF297BF97A00C39F13 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		929E34C2297BF9A900C39F13 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		929E34C3297BF9A900C39F13 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		929E34C6297BF9E300C39F13 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		929E34C8297BF9EF00C39F13 /* ListContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContractor.swift; sourceTree = "<group>"; };
+		929E34CC297BFA3400C39F13 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		929E34D0297BFA7500C39F13 /* Contractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contractable.swift; sourceTree = "<group>"; };
+		929E34D3297BFA8B00C39F13 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		929E34D6297BFAA400C39F13 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		929E34D8297BFAAD00C39F13 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		929E34DA297BFAB700C39F13 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		929E34DE297BFB0B00C39F13 /* indicator-animation-view.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "indicator-animation-view.json"; sourceTree = "<group>"; };
 		97D310D3AF822ACE2232D26E /* Pods-GitHubApp-GitHubAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp-GitHubAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp-GitHubAppUITests/Pods-GitHubApp-GitHubAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5195C5903B2735DD1FE001E /* Pods_GitHubAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30885045942A4B79B487DD6 /* Pods_GitHubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +141,6 @@
 				F2B493BA291967AF5568BA3A /* Pods-GitHubAppTests.debug.xcconfig */,
 				2F52E482A4558CAFEFCBCF0A /* Pods-GitHubAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,10 +169,11 @@
 		929E347D297BF4D000C39F13 /* GitHubApp */ = {
 			isa = PBXGroup;
 			children = (
-				929E347E297BF4D000C39F13 /* AppDelegate.swift */,
-				929E3484297BF4D000C39F13 /* Main.storyboard */,
-				929E348A297BF4D200C39F13 /* Assets.xcassets */,
-				929E348C297BF4D200C39F13 /* LaunchScreen.storyboard */,
+				929E34B7297BF8B600C39F13 /* Application */,
+				929E34B8297BF90D00C39F13 /* Modules */,
+				929E34CA297BFA1700C39F13 /* Commons */,
+				929E34CE297BFA5700C39F13 /* Tools */,
+				929E34DC297BFACE00C39F13 /* SupportingFiles */,
 				929E348F297BF4D200C39F13 /* Info.plist */,
 				929E3487297BF4D000C39F13 /* GitHubApp.xcdatamodeld */,
 			);
@@ -167,6 +195,123 @@
 				929E34A4297BF4D200C39F13 /* GitHubAppUITestsLaunchTests.swift */,
 			);
 			path = GitHubAppUITests;
+			sourceTree = "<group>";
+		};
+		929E34B7297BF8B600C39F13 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				929E347E297BF4D000C39F13 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		929E34B8297BF90D00C39F13 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				929E34B9297BF91E00C39F13 /* List */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		929E34B9297BF91E00C39F13 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				929E34C1297BF97E00C39F13 /* Entity */,
+				929E34BE297BF96900C39F13 /* View */,
+				929E34C8297BF9EF00C39F13 /* ListContractor.swift */,
+				929E34C6297BF9E300C39F13 /* ListRouter.swift */,
+				929E34BC297BF96300C39F13 /* ListPresenter.swift */,
+				929E34BA297BF95300C39F13 /* ListInteractor.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		929E34BE297BF96900C39F13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				929E34C2297BF9A900C39F13 /* ListViewController.swift */,
+				929E34C3297BF9A900C39F13 /* ListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		929E34C1297BF97E00C39F13 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				929E34BF297BF97A00C39F13 /* Models.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		929E34CA297BFA1700C39F13 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				929E34CB297BFA2100C39F13 /* Base */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		929E34CB297BFA2100C39F13 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				929E34CC297BFA3400C39F13 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		929E34CE297BFA5700C39F13 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				929E34D5297BFA9400C39F13 /* Network */,
+				929E34D2297BFA7C00C39F13 /* CoreData */,
+				929E34CF297BFA6500C39F13 /* BaseProtocols */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		929E34CF297BFA6500C39F13 /* BaseProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				929E34D0297BFA7500C39F13 /* Contractable.swift */,
+			);
+			path = BaseProtocols;
+			sourceTree = "<group>";
+		};
+		929E34D2297BFA7C00C39F13 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				929E34D3297BFA8B00C39F13 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		929E34D5297BFA9400C39F13 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				929E34D6297BFAA400C39F13 /* NetworkManager.swift */,
+				929E34D8297BFAAD00C39F13 /* Models.swift */,
+				929E34DA297BFAB700C39F13 /* Networkable.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		929E34DC297BFACE00C39F13 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				929E34DD297BFAEA00C39F13 /* Lottie */,
+				929E3484297BF4D000C39F13 /* Main.storyboard */,
+				929E348C297BF4D200C39F13 /* LaunchScreen.storyboard */,
+				929E348A297BF4D200C39F13 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		929E34DD297BFAEA00C39F13 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				929E34DE297BFB0B00C39F13 /* indicator-animation-view.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +412,8 @@
 			);
 			mainGroup = 929E3472297BF4D000C39F13;
 			packageReferences = (
-				929E34B1297BF5EA00C39F13 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
-				929E34B4297BF62200C39F13 /* XCRemoteSwiftPackageReference "lottie-spm.git" */,
+				929E34B1297BF5EA00C39F13 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				929E34B4297BF62200C39F13 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 929E347C297BF4D000C39F13 /* Products */;
 			projectDirPath = "";
@@ -286,8 +431,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929E34DF297BFB0B00C39F13 /* indicator-animation-view.json in Resources */,
 				929E348E297BF4D200C39F13 /* LaunchScreen.storyboard in Resources */,
 				929E348B297BF4D200C39F13 /* Assets.xcassets in Resources */,
+				929E34C5297BF9A900C39F13 /* ListViewController.xib in Resources */,
 				929E3486297BF4D000C39F13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,8 +563,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929E34D7297BFAA400C39F13 /* NetworkManager.swift in Sources */,
+				929E34D9297BFAAD00C39F13 /* Models.swift in Sources */,
+				929E34BB297BF95300C39F13 /* ListInteractor.swift in Sources */,
+				929E34D1297BFA7500C39F13 /* Contractable.swift in Sources */,
+				929E34C7297BF9E300C39F13 /* ListRouter.swift in Sources */,
+				929E34C9297BF9EF00C39F13 /* ListContractor.swift in Sources */,
 				929E347F297BF4D000C39F13 /* AppDelegate.swift in Sources */,
+				929E34C4297BF9A900C39F13 /* ListViewController.swift in Sources */,
+				929E34CD297BFA3400C39F13 /* BaseViewController.swift in Sources */,
+				929E34BD297BF96300C39F13 /* ListPresenter.swift in Sources */,
+				929E34DB297BFAB700C39F13 /* Networkable.swift in Sources */,
 				929E3489297BF4D000C39F13 /* GitHubApp.xcdatamodeld in Sources */,
+				929E34C0297BF97A00C39F13 /* Models.swift in Sources */,
+				929E34D4297BFA8B00C39F13 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,7 +926,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		929E34B1297BF5EA00C39F13 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		929E34B1297BF5EA00C39F13 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -775,7 +934,7 @@
 				minimumVersion = 5.0.5;
 			};
 		};
-		929E34B4297BF62200C39F13 /* XCRemoteSwiftPackageReference "lottie-spm.git" */ = {
+		929E34B4297BF62200C39F13 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
 			requirement = {
@@ -788,12 +947,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		929E34B2297BF5EA00C39F13 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 929E34B1297BF5EA00C39F13 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 929E34B1297BF5EA00C39F13 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		929E34B5297BF62200C39F13 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 929E34B4297BF62200C39F13 /* XCRemoteSwiftPackageReference "lottie-spm.git" */;
+			package = 929E34B4297BF62200C39F13 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
