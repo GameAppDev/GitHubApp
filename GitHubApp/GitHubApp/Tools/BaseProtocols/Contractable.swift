@@ -12,6 +12,7 @@ import UIKit
     func showIndicatorView()
     func hideIndicatorView()
     func showAlert(message: String)
+    @objc optional func setNavBar(title: String)
 }
 
 extension UIViewController: PresenterToView {
