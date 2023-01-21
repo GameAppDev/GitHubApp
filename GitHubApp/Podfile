@@ -8,6 +8,8 @@ target 'GitHubApp' do
   # Pods for GitHubApp
     pod 'Kingfisher', '~> 6.0'
     pod 'SwiftLint'
+    pod 'Alamofire'
+    pod 'lottie-ios'
 
   target 'GitHubAppTests' do
     inherit! :search_paths
