@@ -9,21 +9,42 @@ import UIKit
 
 final class ListViewController: UIViewController {
 
+    // MARK: - Outlet
+    @IBOutlet private weak var listTableView: UITableView!
+    
+    var presenter: PListViewToPresenter?
+    var connectorTableView: ListTableView?
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.setupTableView()
+        presenter?.viewDidLoad()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter?.viewWillAppear()
     }
-    */
+    
+    fileprivate func setupTableView() {
+        listTableView.backgroundColor = UIColor.clear
+        listTableView.contentInset = UIEdgeInsets(top: CGFloat(10).ws,
+                                                  left: CGFloat(0),
+                                                  bottom: CGFloat(10).ws,
+                                                  right: CGFloat(0))
+        listTableView.dataSource = connectorTableView
+        listTableView.delegate = connectorTableView
+        listTableView.separatorStyle = .none
+        // TODO: - registerCell
+    }
+}
 
+extension ListViewController: PListPresenterToView {
+    
+    func reloadTableView() {
+        listTableView.reloadData()
+    }
 }

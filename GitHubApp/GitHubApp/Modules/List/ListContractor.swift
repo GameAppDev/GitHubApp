@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+protocol PListPresenterToView: PresenterToView {
+    func reloadTableView()
+}
+
+protocol PListViewToPresenter: ViewToPresenter { }
+
+protocol PListPresenterToInteractor: PresenterToInteractor { }
+
+protocol PListInteractorToPresenter: InteractorToPresenter { }
+
+protocol PListPresenterToRouter: PresenterToRouter { }
+
+protocol PListConnectorToPresenter: ConnectorToPresenter { }
