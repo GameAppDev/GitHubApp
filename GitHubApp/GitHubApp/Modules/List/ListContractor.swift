@@ -17,6 +17,8 @@ protocol PListPresenterToInteractor: PresenterToInteractor { }
 
 protocol PListInteractorToPresenter: InteractorToPresenter { }
 
-protocol PListPresenterToRouter: PresenterToRouter { }
+protocol PListPresenterToRouter: PresenterToRouter {
+    func navigateToDetail()
+}
 
 protocol PListConnectorToPresenter: ConnectorToPresenter { }

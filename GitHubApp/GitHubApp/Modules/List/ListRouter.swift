@@ -9,12 +9,17 @@ import UIKit
 
 final class ListRouter {
     
+    weak var view: UIViewController?
+    
     public func returnVC() -> UIViewController {
         return ListBuilder.buildModule()
     }
 }
 
-extension ListRouter: PListPresenterToRouter { }
+extension ListRouter: PListPresenterToRouter {
+    
+    func navigateToDetail() { }
+}
 
 // MARK: - Builder
 enum ListBuilder {
@@ -30,6 +35,8 @@ enum ListBuilder {
         
         viewController.presenter = presenter
         viewController.connectorTableView = connectorTableView
+        
+        router.view = viewController
         
         interactor.presenter = presenter
         

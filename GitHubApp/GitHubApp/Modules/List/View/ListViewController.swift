@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ListViewController: UIViewController {
+final class ListViewController: BaseViewController {
 
     // MARK: - Outlet
     @IBOutlet private weak var listTableView: UITableView!
@@ -46,5 +46,10 @@ extension ListViewController: PListPresenterToView {
     
     func reloadTableView() {
         listTableView.reloadData()
+    }
+    
+    // MARK: - PresenterToView
+    func setNavBar(title: String) {
+        setNavigationBarItems(title: title)
     }
 }

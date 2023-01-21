@@ -30,7 +30,9 @@ extension ListPresenter: PListViewToPresenter {
         interactor?.fetchData(request: "")
     }
     
-    func viewWillAppear() { }
+    func viewWillAppear() {
+        view?.setNavBar?(title: "List")
+    }
 }
 
 extension ListPresenter: PListInteractorToPresenter {
