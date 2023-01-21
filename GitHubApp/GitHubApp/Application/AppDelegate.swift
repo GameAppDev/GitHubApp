@@ -8,12 +8,24 @@
 import UIKit
 import CoreData
 
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let rootVC = CharacterListRouter().returnVC()
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        navigationController.navigationBar.isHidden = true
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

@@ -12,18 +12,19 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupViews() {
+        self.view.backgroundColor = UIColor.viewBGColour
     }
-    */
-
+    
+    public func setNavigationBarItems(title: String) {
+        self.navigationItem.title = title
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.navbarTitleColor,
+                              NSAttributedString.Key.font: UIFont.navbarTitleFont]
+        
+        self.navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
+    }
 }
