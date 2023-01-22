@@ -98,9 +98,24 @@ struct CustomRepositoryModel {
         self.pushedAt = repoResponse.pushedAt.orEmpty
         self.reposUrl = repoResponse.owner?.reposUrl ?? ""
         self.licenseUrl = repoResponse.license?.url ?? ""
-        self.watchersCount = repoResponse.watchersCount?.toString() ?? ""
+        self.watchersCount = repoResponse.watchersCount?.toString() ?? "0"
         self.language = repoResponse.language.orEmpty
         self.visibilityStatus = VisibilityStatus(rawValue: repoResponse.visibility ?? VisibilityStatus.all.rawValue) ?? .all
+    }
+    
+    init(coreDataModel: Repository) {
+        self.id = coreDataModel.id.orEmpty
+        self.fullName = coreDataModel.fullName.orEmpty
+        self.description = coreDataModel.desc.orEmpty
+        self.avatarUrl = coreDataModel.avatarUrl.orEmpty
+        self.createdAt = coreDataModel.createdAt.orEmpty
+        self.updatedAt = coreDataModel.updatedAt.orEmpty
+        self.pushedAt = coreDataModel.pushedAt.orEmpty
+        self.reposUrl = coreDataModel.reposUrl.orEmpty
+        self.licenseUrl = coreDataModel.licenseUrl.orEmpty
+        self.watchersCount = coreDataModel.watchersCount.orEmpty
+        self.language = coreDataModel.language.orEmpty
+        self.visibilityStatus = VisibilityStatus(rawValue: coreDataModel.visibilityStatusRawValue ?? VisibilityStatus.all.rawValue) ?? .all
     }
 }
 
