@@ -98,7 +98,7 @@ extension ListInteractor: PListPresenterToInteractor {
 extension ListInteractor {
     
     private func sortRepositories() -> [CustomRepositoryModel] {
-        // TODO: - Sort data
+        // TODO: - Sort data. TimeInterval
         return self.repositoriesInitial
     }
     
