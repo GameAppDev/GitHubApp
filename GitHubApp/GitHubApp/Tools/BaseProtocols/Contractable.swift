@@ -51,7 +51,7 @@ protocol PresenterToInteractor: AnyObject {
 // MARK: - InteractorToPresenter
 protocol InteractorToPresenter: AnyObject {
     func setData<T>(data: T)
-    func setError(error: BaseError)
+    func setError(errorMessage: String)
 }
 
 // MARK: - PresenterToRouter

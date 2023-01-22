@@ -37,8 +37,8 @@ extension DetailPresenter: PDetailInteractorToPresenter {
     // MARK: - InteractorToPresenter
     func setData<T>(data: T) { }
     
-    func setError(error: BaseError) {
+    func setError(errorMessage: String) {
         view?.hideIndicatorView()
-        view?.showAlert(message: error.errorMessage ?? "Try again")
+        view?.showAlert(message: errorMessage)
     }
 }
