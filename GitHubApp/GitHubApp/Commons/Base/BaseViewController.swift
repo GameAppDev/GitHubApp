@@ -24,7 +24,8 @@ class BaseViewController: UIViewController {
         
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.navBarTextColour,
                               NSAttributedString.Key.font: UIFont.navBarTextFont]
-        
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes as [NSAttributedString.Key: Any]
+        self.navigationController?.navigationBar.backgroundColor = UIColor.navBarBGColour
+        self.navigationController?.navigationBar.barTintColor = UIColor.navBarBGColour
     }
 }
