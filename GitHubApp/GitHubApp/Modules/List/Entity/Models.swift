@@ -105,7 +105,7 @@ struct CustomRepositoryModel {
 }
 
 // MARK: - For Filter
-enum VisibilityStatus: String {
+enum VisibilityStatus: String, CaseIterable {
     case all = "all"
     case publicState = "public"
     case privateState = "private"
@@ -132,9 +132,9 @@ enum VisibilityStatus: String {
 }
 
 // MARK: - For Sort
-enum SortStatus {
-    case byFullName
-    case byCreatedAt
-    case byUpdatedAt
-    case byPushedAt
+enum SortStatus: String, CaseIterable {
+    case byFullName = "FullName"
+    case byCreatedAt = "CreatedAt"
+    case byUpdatedAt = "UpdatedAt"
+    case byPushedAt = "PushedAt"
 }

@@ -11,8 +11,12 @@ final class FilterRouter {
     
     weak var view: UIViewController?
     
-    public func returnVC() -> UIViewController {
-        return ListBuilder.buildModule()
+    public func returnVC(with filtersStatus: [VisibilityStatus: Bool],
+                         sortStatus: SortStatus,
+                         delegate: FilterDelegate?) -> UIViewController {
+        return FilterBuilder.buildModule(with: filtersStatus,
+                                         sortStatus: sortStatus,
+                                         delegate: delegate)
     }
 }
 
@@ -21,13 +25,16 @@ extension FilterRouter: PFilterPresenterToRouter { }
 // MARK: - Builder
 enum FilterBuilder {
 
-    static func buildModule() -> UIViewController {
+    static func buildModule(with filtersStatus: [VisibilityStatus: Bool],
+                            sortStatus: SortStatus,
+                            delegate: FilterDelegate?) -> UIViewController {
         let viewController = FilterViewController()
         let interactor = FilterInteractor()
         let router = FilterRouter()
         let presenter = FilterPresenter(view: viewController,
                                         interactor: interactor,
-                                        router: router)
+                                        router: router,
+                                        delegate: delegate)
         let connectorCollectionView = FilterCollectionViewConnector(presenter: presenter)
         
         viewController.presenter = presenter
@@ -36,6 +43,8 @@ enum FilterBuilder {
         router.view = viewController
         
         interactor.presenter = presenter
+        interactor.filterStatus = filtersStatus
+        interactor.sortStatus = sortStatus
         
         return viewController
     }

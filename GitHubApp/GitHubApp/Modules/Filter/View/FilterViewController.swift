@@ -10,6 +10,7 @@ import UIKit
 final class FilterViewController: BaseViewController {
 
     // MARK: - Outlet
+    @IBOutlet private weak var filterSortCollectionView: UICollectionView!
     
     var presenter: PFilterViewToPresenter?
     var connectorCollectionView: FilterCollectionViewConnector?
@@ -28,12 +29,19 @@ final class FilterViewController: BaseViewController {
         presenter?.viewWillAppear()
     }
 
-    fileprivate func setupCollectionView() { }
+    fileprivate func setupCollectionView() {
+        filterSortCollectionView.dataSource = connectorCollectionView
+        filterSortCollectionView.delegate = connectorCollectionView
+        filterSortCollectionView.registerHeaderCell(FilterCollectionReusableView.self)
+        filterSortCollectionView.registerCell(FilterCollectionViewCell.self)
+    }
 }
 
 extension FilterViewController: PFilterPresenterToView {
     
-    func reloadCollectionView() { }
+    func reloadCollectionView() {
+        filterSortCollectionView.reloadData()
+    }
     
     // MARK: - PresenterToView
     func setNavBar(title: String) {

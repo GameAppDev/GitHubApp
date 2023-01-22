@@ -11,7 +11,12 @@ final class ListInteractor {
     
     weak var presenter: PListInteractorToPresenter?
     
-    private var repositories = [CustomRepositoryModel]()
+    private var repositoriesInitial = [CustomRepositoryModel]() // Initial Data, dont set
+    private var repositories = [CustomRepositoryModel]() // Use it for set, changeable with sort and filter
+    private var filterStatus = [VisibilityStatus: Bool]()
+    private var sortStatus: SortStatus = .byCreatedAt
+    // Set sortStatus .byCreatedAt as default
+    // Comes from response as .byCreatedAt
 }
 
 extension ListInteractor: PListPresenterToInteractor {
@@ -24,10 +29,11 @@ extension ListInteractor: PListPresenterToInteractor {
             
             debugPrint("<--- Service gets response: \(response.model ?? []) - count: \(response.model?.count ?? 0) - path: \(endPoint) --->")
             if let data = response.model {
-                self.repositories = data.map({ repo in
+                self.repositoriesInitial = data.map({ repo in
                     CustomRepositoryModel(repoResponse: repo)
                 })
-                self.presenter?.setData(data: self.repositories)
+                self.repositories = self.repositoriesInitial
+                self.presenter?.setData(data: self.repositoriesInitial)
             } else {
                 self.presenter?.setError(errorMessage: "Try again")
             }
@@ -39,7 +45,64 @@ extension ListInteractor: PListPresenterToInteractor {
         }
     }
     
+    // MARK: - Get
     func getRepositories() -> [CustomRepositoryModel] {
         return self.repositories
+    }
+    
+    // MARK: - Set Model
+    func sortRepositoriesWithFilter() {
+        self.repositories = sortRepositories()
+        
+        guard getSelectedFilterStatus() != .all else {
+            self.repositories = self.repositoriesInitial
+            return
+        }
+        
+        repositories = repositories.compactMap { repo -> CustomRepositoryModel? in
+            if getSelectedFilterStatus() == repo.visibilityStatus {
+                return repo
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    // MARK: - Set Filter
+    func setFiltersToDefault() {
+        VisibilityStatus.allCases.forEach { filterType in
+            filterStatus[filterType] = false
+        }
+        filterStatus[.all] = true
+    }
+    
+    // MARK: - Get Filter-Sort Status
+    func getFilterStatus() -> [VisibilityStatus: Bool] {
+        return self.filterStatus
+    }
+    
+    func getSortStatus() -> SortStatus {
+        return self.sortStatus
+    }
+    
+    // MARK: - Set Filter-Sort Status
+    func setFilterStatus(to status: [VisibilityStatus: Bool]) {
+        self.filterStatus = status
+    }
+    
+    func setSortStatus(to status: SortStatus) {
+        self.sortStatus = status
+    }
+}
+
+extension ListInteractor {
+    
+    private func sortRepositories() -> [CustomRepositoryModel] {
+        // TODO: - Sort data
+        return self.repositoriesInitial
+    }
+    
+    private func getSelectedFilterStatus() -> VisibilityStatus {
+        return filterStatus.first(where: { $0.value == true })?.key ?? .all
     }
 }

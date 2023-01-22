@@ -13,7 +13,7 @@ final class ListViewController: BaseViewController {
     @IBOutlet private weak var listTableView: UITableView!
     
     var presenter: PListViewToPresenter?
-    var connectorTableView: ListTableView?
+    var connectorTableView: ListTableViewConnector?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -31,13 +31,14 @@ final class ListViewController: BaseViewController {
     
     fileprivate func setupTableView() {
         listTableView.backgroundColor = UIColor.clear
-        listTableView.contentInset = UIEdgeInsets(top: CGFloat(0),
+        listTableView.contentInset = UIEdgeInsets(top: CGFloat(10).ws,
                                                   left: CGFloat(0),
                                                   bottom: CGFloat(10).ws,
                                                   right: CGFloat(0))
         listTableView.dataSource = connectorTableView
         listTableView.delegate = connectorTableView
         listTableView.separatorStyle = .none
+        listTableView.registerFooterView(ListTableViewHeaderView.self)
         listTableView.registerCell(ListTableViewCell.self)
     }
 }

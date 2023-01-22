@@ -56,7 +56,6 @@
 		929E3501297C812A00C39F13 /* Optional+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3500297C812A00C39F13 /* Optional+Ext.swift */; };
 		929E3503297C815000C39F13 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3502297C815000C39F13 /* Int+Ext.swift */; };
 		929E3505297C892500C39F13 /* GenericResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3504297C892500C39F13 /* GenericResponseModel.swift */; };
-		929E3509297C8B5500C39F13 /* ListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E3508297C8B5500C39F13 /* ListTableView.swift */; };
 		929E350C297C909700C39F13 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E350A297C909700C39F13 /* ListTableViewCell.swift */; };
 		929E350D297C909700C39F13 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E350B297C909700C39F13 /* ListTableViewCell.xib */; };
 		929E3510297C911C00C39F13 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E350F297C911C00C39F13 /* DetailInteractor.swift */; };
@@ -67,6 +66,11 @@
 		929E351B297C916500C39F13 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E3519297C916500C39F13 /* DetailViewController.xib */; };
 		929E351D297CA8E100C39F13 /* Encodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E351C297CA8E100C39F13 /* Encodable+Ext.swift */; };
 		929E351F297CB13C00C39F13 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E351E297CB13C00C39F13 /* Double+Ext.swift */; };
+		92D5DF7D297D6899005C7678 /* ListTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5DF7C297D6899005C7678 /* ListTableViewHeaderView.swift */; };
+		92D5DF7F297D68D7005C7678 /* ListTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D5DF7E297D68D7005C7678 /* ListTableViewHeaderView.xib */; };
+		92D5DF81297D6B09005C7678 /* ListTableViewConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5DF80297D6B09005C7678 /* ListTableViewConnector.swift */; };
+		92D5DF85297D747E005C7678 /* FilterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5DF83297D747E005C7678 /* FilterCollectionReusableView.swift */; };
+		92D5DF86297D747E005C7678 /* FilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D5DF84297D747E005C7678 /* FilterCollectionReusableView.xib */; };
 		9BDD98133F1939A2F12A580E /* Pods_GitHubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30885045942A4B79B487DD6 /* Pods_GitHubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,7 +147,6 @@
 		929E3500297C812A00C39F13 /* Optional+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Ext.swift"; sourceTree = "<group>"; };
 		929E3502297C815000C39F13 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		929E3504297C892500C39F13 /* GenericResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponseModel.swift; sourceTree = "<group>"; };
-		929E3508297C8B5500C39F13 /* ListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableView.swift; sourceTree = "<group>"; };
 		929E350A297C909700C39F13 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		929E350B297C909700C39F13 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		929E350F297C911C00C39F13 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
@@ -154,6 +157,11 @@
 		929E3519297C916500C39F13 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		929E351C297CA8E100C39F13 /* Encodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Ext.swift"; sourceTree = "<group>"; };
 		929E351E297CB13C00C39F13 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		92D5DF7C297D6899005C7678 /* ListTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewHeaderView.swift; sourceTree = "<group>"; };
+		92D5DF7E297D68D7005C7678 /* ListTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewHeaderView.xib; sourceTree = "<group>"; };
+		92D5DF80297D6B09005C7678 /* ListTableViewConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewConnector.swift; sourceTree = "<group>"; };
+		92D5DF83297D747E005C7678 /* FilterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionReusableView.swift; sourceTree = "<group>"; };
+		92D5DF84297D747E005C7678 /* FilterCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionReusableView.xib; sourceTree = "<group>"; };
 		97D310D3AF822ACE2232D26E /* Pods-GitHubApp-GitHubAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp-GitHubAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp-GitHubAppUITests/Pods-GitHubApp-GitHubAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5195C5903B2735DD1FE001E /* Pods_GitHubAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30885045942A4B79B487DD6 /* Pods_GitHubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +254,7 @@
 		929C9239297D5992003B0E4A /* Connector */ = {
 			isa = PBXGroup;
 			children = (
+				92D5DF82297D7456005C7678 /* Header */,
 				929C9238297D598B003B0E4A /* Cells */,
 				929C9240297D5B75003B0E4A /* FilterCollectionViewConnector.swift */,
 			);
@@ -478,8 +487,9 @@
 		929E3506297C8B4200C39F13 /* Connector */ = {
 			isa = PBXGroup;
 			children = (
+				92D5DF7B297D6865005C7678 /* Header */,
 				929E3507297C8B4800C39F13 /* Cells */,
-				929E3508297C8B5500C39F13 /* ListTableView.swift */,
+				92D5DF80297D6B09005C7678 /* ListTableViewConnector.swift */,
 			);
 			path = Connector;
 			sourceTree = "<group>";
@@ -512,6 +522,24 @@
 				929E3519297C916500C39F13 /* DetailViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		92D5DF7B297D6865005C7678 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				92D5DF7C297D6899005C7678 /* ListTableViewHeaderView.swift */,
+				92D5DF7E297D68D7005C7678 /* ListTableViewHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		92D5DF82297D7456005C7678 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				92D5DF83297D747E005C7678 /* FilterCollectionReusableView.swift */,
+				92D5DF84297D747E005C7678 /* FilterCollectionReusableView.xib */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -628,6 +656,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				929E34DF297BFB0B00C39F13 /* indicator-animation-view.json in Resources */,
+				92D5DF7F297D68D7005C7678 /* ListTableViewHeaderView.xib in Resources */,
 				929E348E297BF4D200C39F13 /* LaunchScreen.storyboard in Resources */,
 				929E348B297BF4D200C39F13 /* Assets.xcassets in Resources */,
 				929E351B297C916500C39F13 /* DetailViewController.xib in Resources */,
@@ -636,6 +665,7 @@
 				929C923F297D59C7003B0E4A /* FilterCollectionViewCell.xib in Resources */,
 				929E3486297BF4D000C39F13 /* Main.storyboard in Resources */,
 				929C9237297D584E003B0E4A /* FilterViewController.xib in Resources */,
+				92D5DF86297D747E005C7678 /* FilterCollectionReusableView.xib in Resources */,
 				929E350D297C909700C39F13 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -769,12 +799,15 @@
 				929C922C297D57FC003B0E4A /* FilterInteractor.swift in Sources */,
 				929E34E6297C279900C39F13 /* Fonts.swift in Sources */,
 				929C9241297D5B75003B0E4A /* FilterCollectionViewConnector.swift in Sources */,
+				92D5DF7D297D6899005C7678 /* ListTableViewHeaderView.swift in Sources */,
 				929E351D297CA8E100C39F13 /* Encodable+Ext.swift in Sources */,
 				920C6356297CBDC800B988CC /* UIImageView+Ext.swift in Sources */,
 				929E34D7297BFAA400C39F13 /* NetworkManager.swift in Sources */,
+				92D5DF81297D6B09005C7678 /* ListTableViewConnector.swift in Sources */,
 				929E34E4297C279200C39F13 /* Colours.swift in Sources */,
 				929C9236297D584E003B0E4A /* FilterViewController.swift in Sources */,
 				929E34BB297BF95300C39F13 /* ListInteractor.swift in Sources */,
+				92D5DF85297D747E005C7678 /* FilterCollectionReusableView.swift in Sources */,
 				929C923E297D59C7003B0E4A /* FilterCollectionViewCell.swift in Sources */,
 				929E34FF297C811600C39F13 /* UINavigationController+Ext.swift in Sources */,
 				929E3503297C815000C39F13 /* Int+Ext.swift in Sources */,
@@ -790,7 +823,6 @@
 				929E34C4297BF9A900C39F13 /* ListViewController.swift in Sources */,
 				929E34CD297BFA3400C39F13 /* BaseViewController.swift in Sources */,
 				929E3501297C812A00C39F13 /* Optional+Ext.swift in Sources */,
-				929E3509297C8B5500C39F13 /* ListTableView.swift in Sources */,
 				929E34F3297C381D00C39F13 /* UIView+Ext.swift in Sources */,
 				929E3505297C892500C39F13 /* GenericResponseModel.swift in Sources */,
 				929E34F1297C380200C39F13 /* CGFloat+Ext.swift in Sources */,

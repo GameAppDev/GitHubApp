@@ -28,6 +28,7 @@ extension ListPresenter: PListViewToPresenter {
     func viewDidLoad() {
         view?.showIndicatorView()
         interactor?.fetchData(request: "")
+        interactor?.setFiltersToDefault()
     }
     
     func viewWillAppear() {
@@ -61,5 +62,25 @@ extension ListPresenter: PListConnectorToPresenter {
         else { return }
         
         router?.navigateToDetail(with: repository)
+    }
+    
+    func handleFilterClicked() {
+        if let filterStatus = interactor?.getFilterStatus(),
+           let sortStatus = interactor?.getSortStatus() {
+            router?.navigateToFilter(with: filterStatus,
+                                     sortStatus: sortStatus,
+                                     delegate: self)
+        }
+    }
+}
+
+extension ListPresenter: FilterDelegate {
+    
+    func applyFilterClicked(filtersStatus: [VisibilityStatus: Bool], sortStatus: SortStatus) {
+        interactor?.setFilterStatus(to: filtersStatus)
+        interactor?.setSortStatus(to: sortStatus)
+        interactor?.sortRepositoriesWithFilter()
+        
+        view?.reloadTableView()
     }
 }

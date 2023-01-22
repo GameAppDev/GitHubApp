@@ -1,5 +1,5 @@
 //
-//  ListTableView.swift
+//  ListTableViewConnector.swift
 //  GitHubApp
 //
 //  Created by Oguzhan Yalcin on 22.01.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ListTableView: NSObject {
+final class ListTableViewConnector: NSObject {
     
     private let presenter: PListConnectorToPresenter?
     
@@ -16,7 +16,7 @@ final class ListTableView: NSObject {
     }
 }
 
-extension ListTableView: UITableViewDataSource, UITableViewDelegate {
+extension ListTableViewConnector: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Count
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,8 +27,19 @@ extension ListTableView: UITableViewDataSource, UITableViewDelegate {
         return (presenter?.getRepositories().count ?? 0)
     }
     
+    // MARK: - Header
+    
     // MARK: - Cells
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ListTableViewHeaderView.className) as? ListTableViewHeaderView
+        else { return UIView() }
+        
+        headerView.configureView(delegate: self, buttonTitle: "  Filter & Sort  ")
+        
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return UITableView.automaticDimension
     }
     
@@ -48,5 +59,12 @@ extension ListTableView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.handleSelectedRepository(index: indexPath.row)
+    }
+}
+
+extension ListTableViewConnector: ListTableViewHeaderViewProtocol {
+    
+    func filterClicked() {
+        presenter?.handleFilterClicked()
     }
 }

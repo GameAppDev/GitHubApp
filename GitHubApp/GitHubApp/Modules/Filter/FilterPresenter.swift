@@ -12,13 +12,16 @@ final class FilterPresenter {
     private weak var view: PFilterPresenterToView?
     private var interactor: PFilterPresenterToInteractor?
     private var router: PFilterPresenterToRouter?
+    weak var delegate: FilterDelegate?
     
     init(view: PFilterPresenterToView,
          interactor: PFilterPresenterToInteractor,
-         router: PFilterPresenterToRouter) {
+         router: PFilterPresenterToRouter,
+         delegate: FilterDelegate?) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        self.delegate = delegate
     }
 }
 
@@ -43,4 +46,34 @@ extension FilterPresenter: PFilterInteractorToPresenter {
     }
 }
 
-extension FilterPresenter: PFilterConnectorToPresenter { }
+extension FilterPresenter: PFilterConnectorToPresenter {
+    
+    func getSortStatus() -> SortStatus {
+        return interactor?.getSortStatus() ?? .byCreatedAt
+    }
+    
+    func getSelectedFilterStatus() -> VisibilityStatus {
+        return interactor?.getSelectedFilterStatus() ?? .all
+    }
+    
+    func handleFilterClicked(index: Int) {
+        guard let filterStatus = VisibilityStatus.allCases[safe: index],
+              let sortStatus = interactor?.getSortStatus(),
+              let interactor = interactor
+        else { return }
+        
+        interactor.setFilterStatus(with: filterStatus, isSelected: true)
+        delegate?.applyFilterClicked(filtersStatus: interactor.getFilterStatus(), sortStatus: sortStatus)
+        view?.reloadCollectionView()
+    }
+    
+    func handleSortClicked(index: Int) {
+        guard let sortStatus = SortStatus.allCases[safe: index],
+              let filterStatus = interactor?.getFilterStatus()
+        else { return }
+        
+        interactor?.setSortStatus(to: sortStatus)
+        delegate?.applyFilterClicked(filtersStatus: filterStatus, sortStatus: sortStatus)
+        view?.reloadCollectionView()
+    }
+}
