@@ -84,7 +84,7 @@ struct CustomRepositoryModel {
     let pushedAt: String
     let reposUrl: String
     let licenseUrl: String
-    let watchersCount: Int
+    let watchersCount: String
     let language: String
     let visibilityStatus: VisibilityStatus
     
@@ -98,7 +98,7 @@ struct CustomRepositoryModel {
         self.pushedAt = repoResponse.pushedAt.orEmpty
         self.reposUrl = repoResponse.owner?.reposUrl ?? ""
         self.licenseUrl = repoResponse.license?.url ?? ""
-        self.watchersCount = repoResponse.watchersCount.orEmpty
+        self.watchersCount = repoResponse.watchersCount?.toString() ?? ""
         self.language = repoResponse.language.orEmpty
         self.visibilityStatus = VisibilityStatus(rawValue: repoResponse.visibility ?? VisibilityStatus.all.rawValue) ?? .all
     }
