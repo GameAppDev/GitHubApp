@@ -33,7 +33,7 @@ final class ListTableViewCell: UITableViewCell {
         avatarImageView.downloadImage(imageKey: repository.avatarUrl, defaultImage: "DefaultListImage")
         fullNameLabel.text = repository.fullName
         languageLabel.text = repository.language
-        watchersLabel.text = "Watchers: \(repository.watchersCount)"
+        watchersLabel.text = "\(repository.watchersCount) Watchers"
     }
     
     fileprivate func setupViews() {
