@@ -24,7 +24,7 @@ extension ListTableView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return (presenter?.getRepositories().count ?? 0)
     }
     
     // MARK: - Cells
@@ -33,6 +33,20 @@ extension ListTableView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let listCell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.className,
+                                                           for: indexPath) as? ListTableViewCell
+        else { return UITableViewCell() }
+
+        guard let repoList = presenter?.getRepositories(),
+              let repo = repoList[safe: indexPath.row]
+        else { return UITableViewCell() }
+
+        listCell.configureCell(with: repo)
+        
+        return listCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.handleSelectedRepository(index: indexPath.row)
     }
 }

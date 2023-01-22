@@ -43,10 +43,23 @@ extension ListPresenter: PListInteractorToPresenter {
         view?.reloadTableView()
     }
     
-    func setError(error: BaseError) {
+    func setError(errorMessage: String) {
         view?.hideIndicatorView()
-        view?.showAlert(message: error.errorMessage ?? "Try again")
+        view?.showAlert(message: errorMessage)
     }
 }
 
-extension ListPresenter: PListConnectorToPresenter { }
+extension ListPresenter: PListConnectorToPresenter {
+    
+    func getRepositories() -> [CustomRepositoryModel] {
+        return interactor?.getRepositories() ?? []
+    }
+    
+    func handleSelectedRepository(index: Int) {
+        guard let repositories = interactor?.getRepositories(),
+              let repository = repositories[safe: index]
+        else { return }
+        
+        router?.navigateToDetail(with: repository)
+    }
+}

@@ -18,7 +18,10 @@ final class ListRouter {
 
 extension ListRouter: PListPresenterToRouter {
     
-    func navigateToDetail() { }
+    func navigateToDetail(with repository: CustomRepositoryModel) {
+        let viewController = DetailRouter().returnVC()
+        view?.navigationController?.push(viewController)
+    }
 }
 
 // MARK: - Builder

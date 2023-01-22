@@ -31,14 +31,14 @@ final class ListViewController: BaseViewController {
     
     fileprivate func setupTableView() {
         listTableView.backgroundColor = UIColor.clear
-        listTableView.contentInset = UIEdgeInsets(top: CGFloat(10).ws,
+        listTableView.contentInset = UIEdgeInsets(top: CGFloat(0),
                                                   left: CGFloat(0),
                                                   bottom: CGFloat(10).ws,
                                                   right: CGFloat(0))
         listTableView.dataSource = connectorTableView
         listTableView.delegate = connectorTableView
         listTableView.separatorStyle = .none
-        // TODO: - registerCell
+        listTableView.registerCell(ListTableViewCell.self)
     }
 }
 

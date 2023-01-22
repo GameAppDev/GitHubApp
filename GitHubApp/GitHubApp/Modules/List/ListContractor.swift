@@ -13,12 +13,17 @@ protocol PListPresenterToView: PresenterToView {
 
 protocol PListViewToPresenter: ViewToPresenter { }
 
-protocol PListPresenterToInteractor: PresenterToInteractor { }
+protocol PListPresenterToInteractor: PresenterToInteractor {
+    func getRepositories() -> [CustomRepositoryModel]
+}
 
 protocol PListInteractorToPresenter: InteractorToPresenter { }
 
 protocol PListPresenterToRouter: PresenterToRouter {
-    func navigateToDetail()
+    func navigateToDetail(with repository: CustomRepositoryModel)
 }
 
-protocol PListConnectorToPresenter: ConnectorToPresenter { }
+protocol PListConnectorToPresenter: ConnectorToPresenter {
+    func getRepositories() -> [CustomRepositoryModel]
+    func handleSelectedRepository(index: Int)
+}
