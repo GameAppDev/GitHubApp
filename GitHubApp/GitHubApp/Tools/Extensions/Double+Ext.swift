@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+extension Double {
+    
+    func toString(fractions: Int = 2) -> String {
+        return NumberFormatter().string(from: NSNumber(value: self)) ?? String(format: "%.\(fractions)f", self)
+    }
+}
