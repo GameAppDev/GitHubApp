@@ -10,6 +10,12 @@
 		64424709C03BFFDFD8C8143F /* Pods_GitHubAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5195C5903B2735DD1FE001E /* Pods_GitHubAppTests.framework */; };
 		8AA3C1A21EF83E69C9491ED2 /* Pods_GitHubApp_GitHubAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A07EA981AE54BBF0106414 /* Pods_GitHubApp_GitHubAppUITests.framework */; };
 		920C6356297CBDC800B988CC /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C6355297CBDC800B988CC /* UIImageView+Ext.swift */; };
+		929C922C297D57FC003B0E4A /* FilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C922B297D57FC003B0E4A /* FilterInteractor.swift */; };
+		929C922E297D580B003B0E4A /* FilterContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C922D297D580B003B0E4A /* FilterContractor.swift */; };
+		929C9230297D5814003B0E4A /* FilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C922F297D5814003B0E4A /* FilterRouter.swift */; };
+		929C9232297D581C003B0E4A /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C9231297D581C003B0E4A /* FilterPresenter.swift */; };
+		929C9236297D584E003B0E4A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C9234297D584E003B0E4A /* FilterViewController.swift */; };
+		929C9237297D584E003B0E4A /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929C9235297D584E003B0E4A /* FilterViewController.xib */; };
 		929E347F297BF4D000C39F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E347E297BF4D000C39F13 /* AppDelegate.swift */; };
 		929E3486297BF4D000C39F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929E3484297BF4D000C39F13 /* Main.storyboard */; };
 		929E3489297BF4D000C39F13 /* GitHubApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 929E3487297BF4D000C39F13 /* GitHubApp.xcdatamodeld */; };
@@ -84,6 +90,12 @@
 		2EBA7DBA997ABB8DED488BE3 /* Pods-GitHubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp/Pods-GitHubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F52E482A4558CAFEFCBCF0A /* Pods-GitHubAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAppTests.release.xcconfig"; path = "Target Support Files/Pods-GitHubAppTests/Pods-GitHubAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		920C6355297CBDC800B988CC /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		929C922B297D57FC003B0E4A /* FilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractor.swift; sourceTree = "<group>"; };
+		929C922D297D580B003B0E4A /* FilterContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContractor.swift; sourceTree = "<group>"; };
+		929C922F297D5814003B0E4A /* FilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRouter.swift; sourceTree = "<group>"; };
+		929C9231297D581C003B0E4A /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
+		929C9234297D584E003B0E4A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		929C9235297D584E003B0E4A /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
 		929E347B297BF4D000C39F13 /* GitHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929E347E297BF4D000C39F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929E3485297BF4D000C39F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -194,6 +206,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		929C922A297D57E6003B0E4A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				929C9233297D581F003B0E4A /* View */,
+				929C922B297D57FC003B0E4A /* FilterInteractor.swift */,
+				929C922D297D580B003B0E4A /* FilterContractor.swift */,
+				929C922F297D5814003B0E4A /* FilterRouter.swift */,
+				929C9231297D581C003B0E4A /* FilterPresenter.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		929C9233297D581F003B0E4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				929C9234297D584E003B0E4A /* FilterViewController.swift */,
+				929C9235297D584E003B0E4A /* FilterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		929E3472297BF4D000C39F13 = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +294,7 @@
 			children = (
 				929E34B9297BF91E00C39F13 /* List */,
 				929E350E297C910B00C39F13 /* Detail */,
+				929C922A297D57E6003B0E4A /* Filter */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -575,6 +609,7 @@
 				929E34C5297BF9A900C39F13 /* ListViewController.xib in Resources */,
 				929E34EC297C291000C39F13 /* ActivityIndicator.xib in Resources */,
 				929E3486297BF4D000C39F13 /* Main.storyboard in Resources */,
+				929C9237297D584E003B0E4A /* FilterViewController.xib in Resources */,
 				929E350D297C909700C39F13 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,15 +740,18 @@
 			files = (
 				929E34EE297C296E00C39F13 /* ActivityIndicatorManager.swift in Sources */,
 				929E3516297C913E00C39F13 /* DetailContractor.swift in Sources */,
+				929C922C297D57FC003B0E4A /* FilterInteractor.swift in Sources */,
 				929E34E6297C279900C39F13 /* Fonts.swift in Sources */,
 				929E351D297CA8E100C39F13 /* Encodable+Ext.swift in Sources */,
 				920C6356297CBDC800B988CC /* UIImageView+Ext.swift in Sources */,
 				929E34D7297BFAA400C39F13 /* NetworkManager.swift in Sources */,
 				929E34E4297C279200C39F13 /* Colours.swift in Sources */,
+				929C9236297D584E003B0E4A /* FilterViewController.swift in Sources */,
 				929E34BB297BF95300C39F13 /* ListInteractor.swift in Sources */,
 				929E34FF297C811600C39F13 /* UINavigationController+Ext.swift in Sources */,
 				929E3503297C815000C39F13 /* Int+Ext.swift in Sources */,
 				929E34D1297BFA7500C39F13 /* Contractable.swift in Sources */,
+				929C9232297D581C003B0E4A /* FilterPresenter.swift in Sources */,
 				929E34C7297BF9E300C39F13 /* ListRouter.swift in Sources */,
 				929E3510297C911C00C39F13 /* DetailInteractor.swift in Sources */,
 				929E34C9297BF9EF00C39F13 /* ListContractor.swift in Sources */,
@@ -732,6 +770,7 @@
 				929E34F5297C7FB400C39F13 /* String+Ext.swift in Sources */,
 				929E34F7297C801500C39F13 /* UICollectionView+Ext.swift in Sources */,
 				929E34DB297BFAB700C39F13 /* Networkable.swift in Sources */,
+				929C922E297D580B003B0E4A /* FilterContractor.swift in Sources */,
 				929E3489297BF4D000C39F13 /* GitHubApp.xcdatamodeld in Sources */,
 				929E351A297C916500C39F13 /* DetailViewController.swift in Sources */,
 				929E34C0297BF97A00C39F13 /* Models.swift in Sources */,
@@ -740,6 +779,7 @@
 				929E34FB297C809300C39F13 /* UITableView+Ext.swift in Sources */,
 				929E34D4297BFA8B00C39F13 /* CoreDataManager.swift in Sources */,
 				929E34EB297C291000C39F13 /* ActivityIndicator.swift in Sources */,
+				929C9230297D5814003B0E4A /* FilterRouter.swift in Sources */,
 				929E350C297C909700C39F13 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
