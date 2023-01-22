@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+final class FilterInteractor {
+    
+    weak var presenter: PFilterInteractorToPresenter?
+}
+
+extension FilterInteractor: PFilterPresenterToInteractor {
+    
+    // MARK: - Fetch
+    func fetchData<T>(request: T) { }
+}

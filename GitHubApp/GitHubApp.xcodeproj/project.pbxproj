@@ -16,6 +16,9 @@
 		929C9232297D581C003B0E4A /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C9231297D581C003B0E4A /* FilterPresenter.swift */; };
 		929C9236297D584E003B0E4A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C9234297D584E003B0E4A /* FilterViewController.swift */; };
 		929C9237297D584E003B0E4A /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929C9235297D584E003B0E4A /* FilterViewController.xib */; };
+		929C923E297D59C7003B0E4A /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C923C297D59C7003B0E4A /* FilterCollectionViewCell.swift */; };
+		929C923F297D59C7003B0E4A /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929C923D297D59C7003B0E4A /* FilterCollectionViewCell.xib */; };
+		929C9241297D5B75003B0E4A /* FilterCollectionViewConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C9240297D5B75003B0E4A /* FilterCollectionViewConnector.swift */; };
 		929E347F297BF4D000C39F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E347E297BF4D000C39F13 /* AppDelegate.swift */; };
 		929E3486297BF4D000C39F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929E3484297BF4D000C39F13 /* Main.storyboard */; };
 		929E3489297BF4D000C39F13 /* GitHubApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 929E3487297BF4D000C39F13 /* GitHubApp.xcdatamodeld */; };
@@ -96,6 +99,9 @@
 		929C9231297D581C003B0E4A /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
 		929C9234297D584E003B0E4A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		929C9235297D584E003B0E4A /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		929C923C297D59C7003B0E4A /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		929C923D297D59C7003B0E4A /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		929C9240297D5B75003B0E4A /* FilterCollectionViewConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewConnector.swift; sourceTree = "<group>"; };
 		929E347B297BF4D000C39F13 /* GitHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929E347E297BF4D000C39F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		929E3485297BF4D000C39F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -210,10 +216,10 @@
 			isa = PBXGroup;
 			children = (
 				929C9233297D581F003B0E4A /* View */,
-				929C922B297D57FC003B0E4A /* FilterInteractor.swift */,
 				929C922D297D580B003B0E4A /* FilterContractor.swift */,
 				929C922F297D5814003B0E4A /* FilterRouter.swift */,
 				929C9231297D581C003B0E4A /* FilterPresenter.swift */,
+				929C922B297D57FC003B0E4A /* FilterInteractor.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -221,10 +227,29 @@
 		929C9233297D581F003B0E4A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				929C9239297D5992003B0E4A /* Connector */,
 				929C9234297D584E003B0E4A /* FilterViewController.swift */,
 				929C9235297D584E003B0E4A /* FilterViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		929C9238297D598B003B0E4A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				929C923C297D59C7003B0E4A /* FilterCollectionViewCell.swift */,
+				929C923D297D59C7003B0E4A /* FilterCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		929C9239297D5992003B0E4A /* Connector */ = {
+			isa = PBXGroup;
+			children = (
+				929C9238297D598B003B0E4A /* Cells */,
+				929C9240297D5B75003B0E4A /* FilterCollectionViewConnector.swift */,
+			);
+			path = Connector;
 			sourceTree = "<group>";
 		};
 		929E3472297BF4D000C39F13 = {
@@ -608,6 +633,7 @@
 				929E351B297C916500C39F13 /* DetailViewController.xib in Resources */,
 				929E34C5297BF9A900C39F13 /* ListViewController.xib in Resources */,
 				929E34EC297C291000C39F13 /* ActivityIndicator.xib in Resources */,
+				929C923F297D59C7003B0E4A /* FilterCollectionViewCell.xib in Resources */,
 				929E3486297BF4D000C39F13 /* Main.storyboard in Resources */,
 				929C9237297D584E003B0E4A /* FilterViewController.xib in Resources */,
 				929E350D297C909700C39F13 /* ListTableViewCell.xib in Resources */,
@@ -742,12 +768,14 @@
 				929E3516297C913E00C39F13 /* DetailContractor.swift in Sources */,
 				929C922C297D57FC003B0E4A /* FilterInteractor.swift in Sources */,
 				929E34E6297C279900C39F13 /* Fonts.swift in Sources */,
+				929C9241297D5B75003B0E4A /* FilterCollectionViewConnector.swift in Sources */,
 				929E351D297CA8E100C39F13 /* Encodable+Ext.swift in Sources */,
 				920C6356297CBDC800B988CC /* UIImageView+Ext.swift in Sources */,
 				929E34D7297BFAA400C39F13 /* NetworkManager.swift in Sources */,
 				929E34E4297C279200C39F13 /* Colours.swift in Sources */,
 				929C9236297D584E003B0E4A /* FilterViewController.swift in Sources */,
 				929E34BB297BF95300C39F13 /* ListInteractor.swift in Sources */,
+				929C923E297D59C7003B0E4A /* FilterCollectionViewCell.swift in Sources */,
 				929E34FF297C811600C39F13 /* UINavigationController+Ext.swift in Sources */,
 				929E3503297C815000C39F13 /* Int+Ext.swift in Sources */,
 				929E34D1297BFA7500C39F13 /* Contractable.swift in Sources */,

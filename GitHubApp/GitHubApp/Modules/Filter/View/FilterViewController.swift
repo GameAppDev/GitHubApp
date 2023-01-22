@@ -9,21 +9,34 @@ import UIKit
 
 final class FilterViewController: BaseViewController {
 
+    // MARK: - Outlet
+    
+    var presenter: PFilterViewToPresenter?
+    var connectorCollectionView: FilterCollectionViewConnector?
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.setupCollectionView()
+        presenter?.viewDidLoad()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter?.viewWillAppear()
     }
-    */
 
+    fileprivate func setupCollectionView() { }
+}
+
+extension FilterViewController: PFilterPresenterToView {
+    
+    func reloadCollectionView() { }
+    
+    // MARK: - PresenterToView
+    func setNavBar(title: String) {
+        setNavigationBarItems(title: title)
+    }
 }
