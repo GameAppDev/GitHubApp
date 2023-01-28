@@ -11,6 +11,9 @@ final class ListTableViewConnector: NSObject {
     
     private let presenter: PListConnectorToPresenter?
     
+    private var headerViewButtonTag: Int { get { return 0 } }
+    private var footerViewButtonTag: Int { get { return 1 } }
+    
     init(presenter: PListConnectorToPresenter) {
         self.presenter = presenter
     }
@@ -28,13 +31,13 @@ extension ListTableViewConnector: UITableViewDataSource, UITableViewDelegate {
     }
     
     // MARK: - Header
-    
-    // MARK: - Cells
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ListTableViewHeaderView.className) as? ListTableViewHeaderView
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ListTableViewHeaderFooterView.className) as? ListTableViewHeaderFooterView
         else { return UIView() }
         
-        headerView.configureView(delegate: self, buttonTitle: "  Filter & Sort  ")
+        headerView.configureView(delegate: self,
+                                 buttonTitle: "Filter & Sort".marginForButtonTitle)
+        headerView.setButtonTag(headerViewButtonTag)
         
         return headerView
     }
@@ -43,6 +46,7 @@ extension ListTableViewConnector: UITableViewDataSource, UITableViewDelegate {
         return UITableView.automaticDimension
     }
     
+    // MARK: - Cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let listCell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.className,
                                                            for: indexPath) as? ListTableViewCell
@@ -60,11 +64,33 @@ extension ListTableViewConnector: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.handleSelectedRepository(index: indexPath.row)
     }
+    
+    // MARK: - Footer
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ListTableViewHeaderFooterView.className) as? ListTableViewHeaderFooterView
+        else { return UIView() }
+        
+        headerView.configureView(delegate: self,
+                                 buttonTitle: "Favourites".marginForButtonTitle)
+        headerView.setButtonTag(footerViewButtonTag)
+        
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
 
-extension ListTableViewConnector: ListTableViewHeaderViewProtocol {
+extension ListTableViewConnector: ListTableViewHeaderFooterViewProtocol {
     
-    func filterClicked() {
-        presenter?.handleFilterClicked()
+    func buttonClicked(tag: Int) {
+        switch tag {
+        case headerViewButtonTag:
+            presenter?.handleFilterClicked()
+        case footerViewButtonTag:
+            presenter?.handleFavouritesClicked()
+        default: break
+        }
     }
 }
