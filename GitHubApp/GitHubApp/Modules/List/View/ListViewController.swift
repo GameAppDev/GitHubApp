@@ -38,7 +38,7 @@ final class ListViewController: BaseViewController {
         listTableView.dataSource = connectorTableView
         listTableView.delegate = connectorTableView
         listTableView.separatorStyle = .none
-        listTableView.registerFooterView(ListTableViewHeaderView.self)
+        listTableView.registerHeaderFooterView(ListTableViewHeaderFooterView.self)
         listTableView.registerCell(ListTableViewCell.self)
     }
 }

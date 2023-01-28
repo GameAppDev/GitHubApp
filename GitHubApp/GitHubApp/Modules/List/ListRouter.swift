@@ -31,6 +31,8 @@ extension ListRouter: PListPresenterToRouter {
                                                      delegate: delegate)
         view?.navigationController?.push(viewController)
     }
+    
+    func navigateToFavourites() { }
 }
 
 // MARK: - Builder

@@ -72,6 +72,10 @@ extension ListPresenter: PListConnectorToPresenter {
                                      delegate: self)
         }
     }
+    
+    func handleFavouritesClicked() {
+        router?.navigateToFavourites()
+    }
 }
 
 extension ListPresenter: FilterDelegate {

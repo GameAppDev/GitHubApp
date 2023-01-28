@@ -75,8 +75,6 @@
 		929E351B297C916500C39F13 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929E3519297C916500C39F13 /* DetailViewController.xib */; };
 		929E351D297CA8E100C39F13 /* Encodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E351C297CA8E100C39F13 /* Encodable+Ext.swift */; };
 		929E351F297CB13C00C39F13 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929E351E297CB13C00C39F13 /* Double+Ext.swift */; };
-		92D5DF7D297D6899005C7678 /* ListTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5DF7C297D6899005C7678 /* ListTableViewHeaderView.swift */; };
-		92D5DF7F297D68D7005C7678 /* ListTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D5DF7E297D68D7005C7678 /* ListTableViewHeaderView.xib */; };
 		92D5DF81297D6B09005C7678 /* ListTableViewConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5DF80297D6B09005C7678 /* ListTableViewConnector.swift */; };
 		92D5DF85297D747E005C7678 /* FilterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5DF83297D747E005C7678 /* FilterCollectionReusableView.swift */; };
 		92D5DF86297D747E005C7678 /* FilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D5DF84297D747E005C7678 /* FilterCollectionReusableView.xib */; };
@@ -175,8 +173,6 @@
 		929E3519297C916500C39F13 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		929E351C297CA8E100C39F13 /* Encodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Ext.swift"; sourceTree = "<group>"; };
 		929E351E297CB13C00C39F13 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
-		92D5DF7C297D6899005C7678 /* ListTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewHeaderView.swift; sourceTree = "<group>"; };
-		92D5DF7E297D68D7005C7678 /* ListTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewHeaderView.xib; sourceTree = "<group>"; };
 		92D5DF80297D6B09005C7678 /* ListTableViewConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewConnector.swift; sourceTree = "<group>"; };
 		92D5DF83297D747E005C7678 /* FilterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionReusableView.swift; sourceTree = "<group>"; };
 		92D5DF84297D747E005C7678 /* FilterCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -236,6 +232,45 @@
 				2F52E482A4558CAFEFCBCF0A /* Pods-GitHubAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		92660CE929855417008ACF7B /* HeaderFooter */ = {
+			isa = PBXGroup;
+			children = (
+				92660CEA29855436008ACF7B /* ListTableViewHeaderFooterView.swift */,
+				92660CEC2985544D008ACF7B /* ListTableViewHeaderFooterView.xib */,
+			);
+			path = HeaderFooter;
+			sourceTree = "<group>";
+		};
+		92660CEE29855F84008ACF7B /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				92660CF729855FDD008ACF7B /* View */,
+				92660CF529855FD1008ACF7B /* FavouritesContractor.swift */,
+				92660CF329855FC3008ACF7B /* FavouritesRouter.swift */,
+				92660CF129855FBC008ACF7B /* FavouritesPresenter.swift */,
+				92660CEF29855FB4008ACF7B /* FavouritesInteractor.swift */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		92660CF729855FDD008ACF7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92660CFC298562D5008ACF7B /* Connector */,
+				92660CF829855FF3008ACF7B /* FavouritesViewController.swift */,
+				92660CF929855FF3008ACF7B /* FavouritesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92660CFC298562D5008ACF7B /* Connector */ = {
+			isa = PBXGroup;
+			children = (
+				92660CFD298562F3008ACF7B /* FavouritesTableViewConnector.swift */,
+			);
+			path = Connector;
 			sourceTree = "<group>";
 		};
 		929C922A297D57E6003B0E4A /* Filter */ = {
@@ -506,7 +541,7 @@
 		929E3506297C8B4200C39F13 /* Connector */ = {
 			isa = PBXGroup;
 			children = (
-				92D5DF7B297D6865005C7678 /* Header */,
+				92660CE929855417008ACF7B /* HeaderFooter */,
 				929E3507297C8B4800C39F13 /* Cells */,
 				92D5DF80297D6B09005C7678 /* ListTableViewConnector.swift */,
 			);
@@ -541,15 +576,6 @@
 				929E3519297C916500C39F13 /* DetailViewController.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		92D5DF7B297D6865005C7678 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				92D5DF7C297D6899005C7678 /* ListTableViewHeaderView.swift */,
-				92D5DF7E297D68D7005C7678 /* ListTableViewHeaderView.xib */,
-			);
-			path = Header;
 			sourceTree = "<group>";
 		};
 		92D5DF82297D7456005C7678 /* Header */ = {
@@ -682,6 +708,7 @@
 				929E34C5297BF9A900C39F13 /* ListViewController.xib in Resources */,
 				929E34EC297C291000C39F13 /* ActivityIndicator.xib in Resources */,
 				929C923F297D59C7003B0E4A /* FilterCollectionViewCell.xib in Resources */,
+				92660CED2985544D008ACF7B /* ListTableViewHeaderFooterView.xib in Resources */,
 				929E3486297BF4D000C39F13 /* Main.storyboard in Resources */,
 				929C9237297D584E003B0E4A /* FilterViewController.xib in Resources */,
 				92D5DF86297D747E005C7678 /* FilterCollectionReusableView.xib in Resources */,
@@ -813,12 +840,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92660CEB29855436008ACF7B /* ListTableViewHeaderFooterView.swift in Sources */,
 				929E34EE297C296E00C39F13 /* ActivityIndicatorManager.swift in Sources */,
 				929E3516297C913E00C39F13 /* DetailContractor.swift in Sources */,
 				929C922C297D57FC003B0E4A /* FilterInteractor.swift in Sources */,
+				92660CFA29855FF3008ACF7B /* FavouritesViewController.swift in Sources */,
 				929E34E6297C279900C39F13 /* Fonts.swift in Sources */,
 				929C9241297D5B75003B0E4A /* FilterCollectionViewConnector.swift in Sources */,
-				92D5DF7D297D6899005C7678 /* ListTableViewHeaderView.swift in Sources */,
 				929E351D297CA8E100C39F13 /* Encodable+Ext.swift in Sources */,
 				920C6356297CBDC800B988CC /* UIImageView+Ext.swift in Sources */,
 				929E34D7297BFAA400C39F13 /* NetworkManager.swift in Sources */,

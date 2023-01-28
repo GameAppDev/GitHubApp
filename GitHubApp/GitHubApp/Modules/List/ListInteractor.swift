@@ -52,20 +52,19 @@ extension ListInteractor: PListPresenterToInteractor {
     
     // MARK: - Set Model
     func sortRepositoriesWithFilter() {
-        self.repositories = sortRepositories()
+        repositories = repositoriesInitial
         
-        guard getSelectedFilterStatus() != .all else {
-            self.repositories = self.repositoriesInitial
-            return
-        }
-        
-        repositories = repositories.compactMap { repo -> CustomRepositoryModel? in
-            if getSelectedFilterStatus() == repo.visibilityStatus {
-                return repo
-            } else {
-                return nil
+        if getSelectedFilterStatus() != .all {
+            repositories = repositories.compactMap { repo -> CustomRepositoryModel? in
+                if getSelectedFilterStatus() == repo.visibilityStatus {
+                    return repo
+                } else {
+                    return nil
+                }
             }
         }
+        
+        sortRepositories()
     }
     
     // MARK: - Set Filter
@@ -97,9 +96,17 @@ extension ListInteractor: PListPresenterToInteractor {
 
 extension ListInteractor {
     
-    private func sortRepositories() -> [CustomRepositoryModel] {
-        // TODO: - Sort data. TimeInterval
-        return self.repositoriesInitial
+    private func sortRepositories() {
+        switch sortStatus {
+        case .byFullName:
+            repositories = repositories.sorted { $0.fullName.lowercased() < $1.fullName.lowercased() }
+        case .byCreatedAt:
+            repositories = repositories.sorted { $0.createdAtTimeInterval > $1.createdAtTimeInterval }
+        case .byUpdatedAt:
+            repositories = repositories.sorted { $0.updatedAtTimeInterval > $1.updatedAtTimeInterval }
+        case .byPushedAt:
+            repositories = repositories.sorted { $0.pushedAtTimeInterval > $1.pushedAtTimeInterval }
+        }
     }
     
     private func getSelectedFilterStatus() -> VisibilityStatus {

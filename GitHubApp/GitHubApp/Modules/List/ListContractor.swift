@@ -30,10 +30,12 @@ protocol PListPresenterToRouter: PresenterToRouter {
     func navigateToFilter(with filtersStatus: [VisibilityStatus: Bool],
                           sortStatus: SortStatus,
                           delegate: FilterDelegate?)
+    func navigateToFavourites()
 }
 
 protocol PListConnectorToPresenter: ConnectorToPresenter {
     func getRepositories() -> [CustomRepositoryModel]
     func handleSelectedRepository(index: Int)
     func handleFilterClicked()
+    func handleFavouritesClicked()
 }
