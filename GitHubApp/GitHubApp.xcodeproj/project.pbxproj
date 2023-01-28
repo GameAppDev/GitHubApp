@@ -10,6 +10,15 @@
 		64424709C03BFFDFD8C8143F /* Pods_GitHubAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5195C5903B2735DD1FE001E /* Pods_GitHubAppTests.framework */; };
 		8AA3C1A21EF83E69C9491ED2 /* Pods_GitHubApp_GitHubAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A07EA981AE54BBF0106414 /* Pods_GitHubApp_GitHubAppUITests.framework */; };
 		920C6356297CBDC800B988CC /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C6355297CBDC800B988CC /* UIImageView+Ext.swift */; };
+		92660CEB29855436008ACF7B /* ListTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92660CEA29855436008ACF7B /* ListTableViewHeaderFooterView.swift */; };
+		92660CED2985544D008ACF7B /* ListTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92660CEC2985544D008ACF7B /* ListTableViewHeaderFooterView.xib */; };
+		92660CF029855FB4008ACF7B /* FavouritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92660CEF29855FB4008ACF7B /* FavouritesInteractor.swift */; };
+		92660CF229855FBC008ACF7B /* FavouritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92660CF129855FBC008ACF7B /* FavouritesPresenter.swift */; };
+		92660CF429855FC3008ACF7B /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92660CF329855FC3008ACF7B /* FavouritesRouter.swift */; };
+		92660CF629855FD1008ACF7B /* FavouritesContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92660CF529855FD1008ACF7B /* FavouritesContractor.swift */; };
+		92660CFA29855FF3008ACF7B /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92660CF829855FF3008ACF7B /* FavouritesViewController.swift */; };
+		92660CFB29855FF3008ACF7B /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92660CF929855FF3008ACF7B /* FavouritesViewController.xib */; };
+		92660CFE298562F3008ACF7B /* FavouritesTableViewConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92660CFD298562F3008ACF7B /* FavouritesTableViewConnector.swift */; };
 		929C922C297D57FC003B0E4A /* FilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C922B297D57FC003B0E4A /* FilterInteractor.swift */; };
 		929C922E297D580B003B0E4A /* FilterContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C922D297D580B003B0E4A /* FilterContractor.swift */; };
 		929C9230297D5814003B0E4A /* FilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C922F297D5814003B0E4A /* FilterRouter.swift */; };
@@ -97,6 +106,15 @@
 		2EBA7DBA997ABB8DED488BE3 /* Pods-GitHubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp/Pods-GitHubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F52E482A4558CAFEFCBCF0A /* Pods-GitHubAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAppTests.release.xcconfig"; path = "Target Support Files/Pods-GitHubAppTests/Pods-GitHubAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		920C6355297CBDC800B988CC /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		92660CEA29855436008ACF7B /* ListTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		92660CEC2985544D008ACF7B /* ListTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
+		92660CEF29855FB4008ACF7B /* FavouritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesInteractor.swift; sourceTree = "<group>"; };
+		92660CF129855FBC008ACF7B /* FavouritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPresenter.swift; sourceTree = "<group>"; };
+		92660CF329855FC3008ACF7B /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
+		92660CF529855FD1008ACF7B /* FavouritesContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesContractor.swift; sourceTree = "<group>"; };
+		92660CF829855FF3008ACF7B /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		92660CF929855FF3008ACF7B /* FavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
+		92660CFD298562F3008ACF7B /* FavouritesTableViewConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewConnector.swift; sourceTree = "<group>"; };
 		929C922B297D57FC003B0E4A /* FilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractor.swift; sourceTree = "<group>"; };
 		929C922D297D580B003B0E4A /* FilterContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContractor.swift; sourceTree = "<group>"; };
 		929C922F297D5814003B0E4A /* FilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRouter.swift; sourceTree = "<group>"; };
@@ -329,6 +347,7 @@
 				929E34B9297BF91E00C39F13 /* List */,
 				929E350E297C910B00C39F13 /* Detail */,
 				929C922A297D57E6003B0E4A /* Filter */,
+				92660CEE29855F84008ACF7B /* Favourites */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -656,8 +675,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				929E34DF297BFB0B00C39F13 /* indicator-animation-view.json in Resources */,
-				92D5DF7F297D68D7005C7678 /* ListTableViewHeaderView.xib in Resources */,
 				929E348E297BF4D200C39F13 /* LaunchScreen.storyboard in Resources */,
+				92660CFB29855FF3008ACF7B /* FavouritesViewController.xib in Resources */,
 				929E348B297BF4D200C39F13 /* Assets.xcassets in Resources */,
 				929E351B297C916500C39F13 /* DetailViewController.xib in Resources */,
 				929E34C5297BF9A900C39F13 /* ListViewController.xib in Resources */,
@@ -805,6 +824,7 @@
 				929E34D7297BFAA400C39F13 /* NetworkManager.swift in Sources */,
 				92D5DF81297D6B09005C7678 /* ListTableViewConnector.swift in Sources */,
 				929E34E4297C279200C39F13 /* Colours.swift in Sources */,
+				92660CF629855FD1008ACF7B /* FavouritesContractor.swift in Sources */,
 				929C9236297D584E003B0E4A /* FilterViewController.swift in Sources */,
 				929E34BB297BF95300C39F13 /* ListInteractor.swift in Sources */,
 				92D5DF85297D747E005C7678 /* FilterCollectionReusableView.swift in Sources */,
@@ -812,12 +832,15 @@
 				929E34FF297C811600C39F13 /* UINavigationController+Ext.swift in Sources */,
 				929E3503297C815000C39F13 /* Int+Ext.swift in Sources */,
 				929E34D1297BFA7500C39F13 /* Contractable.swift in Sources */,
+				92660CF429855FC3008ACF7B /* FavouritesRouter.swift in Sources */,
 				929C9232297D581C003B0E4A /* FilterPresenter.swift in Sources */,
 				929E34C7297BF9E300C39F13 /* ListRouter.swift in Sources */,
 				929E3510297C911C00C39F13 /* DetailInteractor.swift in Sources */,
 				929E34C9297BF9EF00C39F13 /* ListContractor.swift in Sources */,
 				929E347F297BF4D000C39F13 /* AppDelegate.swift in Sources */,
 				929E3514297C913300C39F13 /* DetailRouter.swift in Sources */,
+				92660CF029855FB4008ACF7B /* FavouritesInteractor.swift in Sources */,
+				92660CFE298562F3008ACF7B /* FavouritesTableViewConnector.swift in Sources */,
 				929E34F9297C803500C39F13 /* Array+Ext.swift in Sources */,
 				929E351F297CB13C00C39F13 /* Double+Ext.swift in Sources */,
 				929E34C4297BF9A900C39F13 /* ListViewController.swift in Sources */,
@@ -833,6 +856,7 @@
 				929C922E297D580B003B0E4A /* FilterContractor.swift in Sources */,
 				929E3489297BF4D000C39F13 /* GitHubApp.xcdatamodeld in Sources */,
 				929E351A297C916500C39F13 /* DetailViewController.swift in Sources */,
+				92660CF229855FBC008ACF7B /* FavouritesPresenter.swift in Sources */,
 				929E34C0297BF97A00C39F13 /* Models.swift in Sources */,
 				929E34FD297C80C200C39F13 /* NSObject+Ext.swift in Sources */,
 				929E3512297C912900C39F13 /* DetailPresenter.swift in Sources */,
