@@ -13,7 +13,7 @@ extension UITableView {
         register(nibFromClass(cell), forCellReuseIdentifier: cell.className)
     }
 
-    func registerFooterView<T: UITableViewHeaderFooterView>(_ cell: T.Type) {
+    func registerHeaderFooterView<T: UITableViewHeaderFooterView>(_ cell: T.Type) {
         register(nibFromClass(cell), forHeaderFooterViewReuseIdentifier: cell.className)
     }
     

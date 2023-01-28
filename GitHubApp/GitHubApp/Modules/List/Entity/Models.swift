@@ -87,6 +87,9 @@ struct CustomRepositoryModel {
     let watchersCount: String
     let language: String
     let visibilityStatus: VisibilityStatus
+    let createdAtTimeInterval: TimeInterval
+    let updatedAtTimeInterval: TimeInterval
+    let pushedAtTimeInterval: TimeInterval
     
     init(repoResponse: RepoResponse) {
         self.id = repoResponse.id?.toString(fractions: 0) ?? ""
@@ -101,6 +104,9 @@ struct CustomRepositoryModel {
         self.watchersCount = repoResponse.watchersCount?.toString() ?? "0"
         self.language = repoResponse.language.orEmpty
         self.visibilityStatus = VisibilityStatus(rawValue: repoResponse.visibility ?? VisibilityStatus.all.rawValue) ?? .all
+        self.createdAtTimeInterval = self.createdAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ").timeIntervalSince1970
+        self.updatedAtTimeInterval = self.updatedAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ").timeIntervalSince1970
+        self.pushedAtTimeInterval = self.pushedAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ").timeIntervalSince1970
     }
     
     init(coreDataModel: Repository) {
@@ -116,6 +122,9 @@ struct CustomRepositoryModel {
         self.watchersCount = coreDataModel.watchersCount.orEmpty
         self.language = coreDataModel.language.orEmpty
         self.visibilityStatus = VisibilityStatus(rawValue: coreDataModel.visibilityStatusRawValue ?? VisibilityStatus.all.rawValue) ?? .all
+        self.createdAtTimeInterval = self.createdAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ").timeIntervalSince1970
+        self.updatedAtTimeInterval = self.updatedAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ").timeIntervalSince1970
+        self.pushedAtTimeInterval = self.pushedAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ").timeIntervalSince1970
     }
 }
 
