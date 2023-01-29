@@ -1,13 +1,13 @@
 //
-//  ListTableViewCell.swift
+//  CustomCardTableViewCell.swift
 //  GitHubApp
 //
-//  Created by Oguzhan Yalcin on 22.01.2023.
+//  Created by Oguzhan Yalcin on 29.01.2023.
 //
 
 import UIKit
 
-final class ListTableViewCell: UITableViewCell {
+final class CustomCardTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
     @IBOutlet private weak var containerView: UIView!
@@ -30,7 +30,7 @@ final class ListTableViewCell: UITableViewCell {
     public func configureCell(with repository: CustomRepositoryModel) {
         self.setupViews()
         containerView.backgroundColor = repository.visibilityStatus.stateColour
-        avatarImageView.downloadImage(imageKey: repository.avatarUrl, defaultImage: "DefaultListImage")
+        avatarImageView.downloadImage(imageKey: repository.avatarUrl, defaultImage: "DefaultCardImage")
         fullNameLabel.text = repository.fullName
         languageLabel.text = repository.language
         watchersLabel.text = "\(repository.watchersCount) Watchers"
