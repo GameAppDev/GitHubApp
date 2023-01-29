@@ -19,7 +19,7 @@ final class ListRouter {
 extension ListRouter: PListPresenterToRouter {
     
     func navigateToDetail(with repository: CustomRepositoryModel) {
-        let viewController = DetailRouter().returnVC()
+        let viewController = DetailRouter().returnVC(repository: repository)
         view?.navigationController?.push(viewController)
     }
     
@@ -32,7 +32,10 @@ extension ListRouter: PListPresenterToRouter {
         view?.navigationController?.push(viewController)
     }
     
-    func navigateToFavourites() { }
+    func navigateToFavourites() {
+        let viewController = FavouritesRouter().returnVC()
+        view?.navigationController?.push(viewController)
+    }
 }
 
 // MARK: - Builder

@@ -48,8 +48,8 @@ extension ListTableViewConnector: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let listCell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.className,
-                                                           for: indexPath) as? ListTableViewCell
+        guard let listCell = tableView.dequeueReusableCell(withIdentifier: CustomCardTableViewCell.className,
+                                                           for: indexPath) as? CustomCardTableViewCell
         else { return UITableViewCell() }
 
         guard let repoList = presenter?.getRepositories(),
