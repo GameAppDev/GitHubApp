@@ -38,7 +38,7 @@ final class FavouritesViewController: BaseViewController {
         favouriteListTableView.dataSource = connectorTableView
         favouriteListTableView.delegate = connectorTableView
         favouriteListTableView.separatorStyle = .none
-        favouriteListTableView.registerCell(ListTableViewCell.self)
+        favouriteListTableView.registerCell(CustomCardTableViewCell.self)
     }
 }
 

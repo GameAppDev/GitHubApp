@@ -19,7 +19,7 @@ final class FavouritesRouter {
 extension FavouritesRouter: PFavouritesPresenterToRouter {
     
     func navigateToDetail(with repository: CustomRepositoryModel) {
-        let viewController = DetailRouter().returnVC()
+        let viewController = DetailRouter().returnVC(repository: repository)
         view?.navigationController?.push(viewController)
     }
 }
@@ -32,8 +32,8 @@ enum FavouritesBuilder {
         let interactor = FavouritesInteractor()
         let router = FavouritesRouter()
         let presenter = FavouritesPresenter(view: viewController,
-                                      interactor: interactor,
-                                      router: router)
+                                            interactor: interactor,
+                                            router: router)
         let connectorTableView = FavouritesTableViewConnector(presenter: presenter)
         
         viewController.presenter = presenter

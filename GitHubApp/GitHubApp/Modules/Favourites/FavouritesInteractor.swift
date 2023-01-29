@@ -17,7 +17,10 @@ final class FavouritesInteractor {
 extension FavouritesInteractor: PFavouritesPresenterToInteractor {
     
     // MARK: - Fetch
-    func fetchData<T>(request: T) { }
+    func fetchData<T>(request: T) {
+        self.repositories = CoreDataManager.shared.getFavouriteRepos()
+        presenter?.setData(data: self.repositories)
+    }
     
     // MARK: - Get
     func getRepositories() -> [CustomRepositoryModel] {

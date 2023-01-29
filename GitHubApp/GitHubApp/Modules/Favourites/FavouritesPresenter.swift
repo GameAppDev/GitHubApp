@@ -29,6 +29,9 @@ extension FavouritesPresenter: PFavouritesViewToPresenter {
     
     func viewWillAppear() {
         view?.setNavBar?(title: "Favourites")
+        
+        view?.showIndicatorView()
+        interactor?.fetchData(request: "")
     }
 }
 
