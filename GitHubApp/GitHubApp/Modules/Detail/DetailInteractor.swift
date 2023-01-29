@@ -10,10 +10,16 @@ import Foundation
 final class DetailInteractor {
     
     weak var presenter: PDetailInteractorToPresenter?
+    var repository: CustomRepositoryModel?
 }
 
 extension DetailInteractor: PDetailPresenterToInteractor {
     
     // MARK: - Fetch
     func fetchData<T>(request: T) { }
+    
+    // MARK: - Get
+    func getRepository() -> CustomRepositoryModel? {
+        return self.repository
+    }
 }

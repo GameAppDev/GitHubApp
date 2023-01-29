@@ -30,6 +30,8 @@ extension DetailPresenter: PDetailViewToPresenter {
     func viewWillAppear() {
         view?.setNavBar?(title: "Detail")
     }
+    
+    func handleFavClicked() { }
 }
 
 extension DetailPresenter: PDetailInteractorToPresenter {

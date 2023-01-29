@@ -11,8 +11,8 @@ final class DetailRouter {
     
     weak var view: UIViewController?
     
-    public func returnVC() -> UIViewController {
-        return DetailBuilder.buildModule()
+    public func returnVC(repository: CustomRepositoryModel) -> UIViewController {
+        return DetailBuilder.buildModule(repository: repository)
     }
 }
 
@@ -21,7 +21,7 @@ extension DetailRouter: PDetailPresenterToRouter { }
 // MARK: - Builder
 enum DetailBuilder {
 
-    static func buildModule() -> UIViewController {
+    static func buildModule(repository: CustomRepositoryModel) -> UIViewController {
         let viewController = DetailViewController()
         let interactor = DetailInteractor()
         let router = DetailRouter()
@@ -34,6 +34,7 @@ enum DetailBuilder {
         router.view = viewController
         
         interactor.presenter = presenter
+        interactor.repository = repository
         
         return viewController
     }
