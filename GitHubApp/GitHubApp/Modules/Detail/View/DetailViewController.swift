@@ -39,7 +39,31 @@ final class DetailViewController: BaseViewController {
         presenter?.viewWillAppear()
     }
     
-    fileprivate func setupViews() { }
+    fileprivate func setupViews() {
+        avatarImageView.roundCorners(size: CGFloat(10).ws)
+        nameLabel.font = UIFont.titleFont
+        nameLabel.textColor = UIColor.titleColour
+        descriptionLabel.font = UIFont.textFont
+        descriptionLabel.textColor = UIColor.textColour
+        languageLabel.font = UIFont.textFont
+        languageLabel.textColor = UIColor.textColour
+        watchersLabel.font = UIFont.textFont
+        watchersLabel.textColor = UIColor.textColour
+        statusLabel.font = UIFont.textFont
+        statusLabel.textColor = UIColor.textColour
+        createdDateLabel.font = UIFont.textFont
+        createdDateLabel.textColor = UIColor.textColour
+        updatedDateLabel.font = UIFont.textFont
+        updatedDateLabel.textColor = UIColor.textColour
+        pushedDateLabel.font = UIFont.textFont
+        pushedDateLabel.textColor = UIColor.textColour
+        repoUrlLabel.font = UIFont.textFont
+        repoUrlLabel.textColor = UIColor.textColour
+        licenseUrlLabel.font = UIFont.textFont
+        licenseUrlLabel.textColor = UIColor.textColour
+        favButton.roundCorners(size: CGFloat(10).ws)
+        favButton.titleLabel?.font = UIFont.navBarTextFont
+    }
     
     @IBAction private func favButtonClicked(_ sender: UIButton) {
         presenter?.handleFavClicked()
@@ -93,16 +117,8 @@ extension DetailViewController: PDetailPresenterToView {
         repoUrlLabel.text = text
     }
     
-    func setRepoUrlLabel(isHidden: Bool) {
-        repoUrlLabel.isHidden = isHidden
-    }
-    
     func setLicenseUrlLabel(text: String) {
         licenseUrlLabel.text = text
-    }
-    
-    func setLicenseUrlLabel(isHidden: Bool) {
-        licenseUrlLabel.isHidden = isHidden
     }
     
     func setFavButton(title: String) {
@@ -110,6 +126,8 @@ extension DetailViewController: PDetailPresenterToView {
     }
     
     func setFavButton(isEnabled: Bool) {
+        favButton.backgroundColor = isEnabled ? UIColor.navBarBGColour : UIColor.lightGray
+        favButton.setTitleColor(isEnabled ? UIColor.navBarTextColour : UIColor.black, for: .normal)
         favButton.isEnabled = isEnabled
     }
 }

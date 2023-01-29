@@ -18,9 +18,7 @@ protocol PDetailPresenterToView: PresenterToView {
     func setUpdatedDateLabel(text: String)
     func setPushedDateLabel(text: String)
     func setRepoUrlLabel(text: String)
-    func setRepoUrlLabel(isHidden: Bool)
     func setLicenseUrlLabel(text: String)
-    func setLicenseUrlLabel(isHidden: Bool)
     func setFavButton(title: String)
     func setFavButton(isEnabled: Bool)
 }
@@ -31,6 +29,7 @@ protocol PDetailViewToPresenter: ViewToPresenter {
 
 protocol PDetailPresenterToInteractor: PresenterToInteractor {
     func getRepository() -> CustomRepositoryModel?
+    func setRepositoryAsFavourite()
 }
 
 protocol PDetailInteractorToPresenter: InteractorToPresenter { }
