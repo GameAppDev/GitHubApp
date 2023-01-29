@@ -47,9 +47,12 @@ extension DetailPresenter: PDetailViewToPresenter {
         view?.setLanguageLabel(text: repository.language)
         view?.setWatchersLabel(text: "\(repository.watchersCount) Watchers")
         view?.setStatusLabel(text: repository.visibilityStatus.rawValue.uppercased())
-        view?.setCreatedDateLabel(text: repository.createdAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ").toString(dateFormat: "MM-dd-yyyy"))
-        view?.setUpdatedDateLabel(text: repository.updatedAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ").toString(dateFormat: "MM-dd-yyyy"))
-        view?.setPushedDateLabel(text: repository.pushedAt.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ").toString(dateFormat: "MM-dd-yyyy"))
+        view?.setCreatedDateLabel(text: repository.createdAt.toFormattedDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ",
+                                                                             stringFormat: "MM-dd-yyyy"))
+        view?.setUpdatedDateLabel(text: repository.updatedAt.toFormattedDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ",
+                                                                             stringFormat: "MM-dd-yyyy"))
+        view?.setPushedDateLabel(text: repository.pushedAt.toFormattedDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ",
+                                                                           stringFormat: "MM-dd-yyyy"))
         view?.setRepoUrlLabel(text: repository.reposUrl)
         view?.setLicenseUrlLabel(text: repository.licenseUrl)
         view?.setFavButton(title: "Favourite")
