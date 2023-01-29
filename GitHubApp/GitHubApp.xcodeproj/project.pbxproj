@@ -78,6 +78,7 @@
 		92D5DF81297D6B09005C7678 /* ListTableViewConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5DF80297D6B09005C7678 /* ListTableViewConnector.swift */; };
 		92D5DF85297D747E005C7678 /* FilterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D5DF83297D747E005C7678 /* FilterCollectionReusableView.swift */; };
 		92D5DF86297D747E005C7678 /* FilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D5DF84297D747E005C7678 /* FilterCollectionReusableView.xib */; };
+		92F01A3B2986E2FD003D706F /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F01A3A2986E2FD003D706F /* Date+Ext.swift */; };
 		9BDD98133F1939A2F12A580E /* Pods_GitHubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30885045942A4B79B487DD6 /* Pods_GitHubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +177,7 @@
 		92D5DF80297D6B09005C7678 /* ListTableViewConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewConnector.swift; sourceTree = "<group>"; };
 		92D5DF83297D747E005C7678 /* FilterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionReusableView.swift; sourceTree = "<group>"; };
 		92D5DF84297D747E005C7678 /* FilterCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionReusableView.xib; sourceTree = "<group>"; };
+		92F01A3A2986E2FD003D706F /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		97D310D3AF822ACE2232D26E /* Pods-GitHubApp-GitHubAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp-GitHubAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp-GitHubAppUITests/Pods-GitHubApp-GitHubAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5195C5903B2735DD1FE001E /* Pods_GitHubAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30885045942A4B79B487DD6 /* Pods_GitHubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -551,6 +553,7 @@
 				929E34F2297C381D00C39F13 /* UIView+Ext.swift */,
 				929E34F4297C7FB400C39F13 /* String+Ext.swift */,
 				929E34FA297C809300C39F13 /* UITableView+Ext.swift */,
+				92F01A3A2986E2FD003D706F /* Date+Ext.swift */,
 				929E351C297CA8E100C39F13 /* Encodable+Ext.swift */,
 				929E34FC297C80C200C39F13 /* NSObject+Ext.swift */,
 				929E34FE297C811600C39F13 /* UINavigationController+Ext.swift */,
@@ -883,6 +886,7 @@
 				929E3510297C911C00C39F13 /* DetailInteractor.swift in Sources */,
 				929E34C9297BF9EF00C39F13 /* ListContractor.swift in Sources */,
 				929E347F297BF4D000C39F13 /* AppDelegate.swift in Sources */,
+				92F01A3B2986E2FD003D706F /* Date+Ext.swift in Sources */,
 				929E3514297C913300C39F13 /* DetailRouter.swift in Sources */,
 				92660CF029855FB4008ACF7B /* FavouritesInteractor.swift in Sources */,
 				92660CFE298562F3008ACF7B /* FavouritesTableViewConnector.swift in Sources */,
