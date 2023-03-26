@@ -1,7 +1,9 @@
 # GitHubApp
 ---
 
-![list](https://www.linkpicture.com/q/GitHubAppList.png) ![search](https://www.linkpicture.com/q/GitHubAppDetail1.png) ![search](https://www.linkpicture.com/q/GitHubAppDetail2.png) ![search](https://www.linkpicture.com/q/GitHubAppFavourites.png) ![search](https://www.linkpicture.com/q/GitHubAppFilterSort.png) 
+<img src="https://www.linkpicture.com/q/GitHubAppList.png" width="393" height="852"> <img src="https://www.linkpicture.com/q/GitHubAppFavourites.png" width="393" height="852">
+<img src="https://www.linkpicture.com/q/GitHubAppDetail1.png" width="393" height="852"> <img src="https://www.linkpicture.com/q/GitHubAppDetail2.png" width="393" height="852">
+<img src="https://www.linkpicture.com/q/GitHubAppFilterSort.png" width="393" height="852">
 
 
 ## Overview
